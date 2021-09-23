@@ -32,7 +32,6 @@ public class LessonController {
     @GetMapping("/{id}")
     public Optional<Lesson> getLessonById(@PathVariable Long id){
         Optional<Lesson> lesson = lessonTable.findById(id);
-
         return lesson;
     }
     @DeleteMapping("/{id}")
