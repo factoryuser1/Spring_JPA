@@ -43,6 +43,5 @@ public class LessonController {
         } catch (Exception e){
             return "Unable to delete lesson #: " + id;
         }
-
     }
 }
