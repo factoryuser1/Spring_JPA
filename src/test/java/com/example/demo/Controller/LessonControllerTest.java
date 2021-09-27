@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 
-import static com.example.demo.Controller.LessonController.*;
+import static com.example.demo.Controller.LessonController.getDateFromString;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
@@ -90,6 +90,17 @@ public class LessonControllerTest {
                     "deliveredOn": "2021-09-27"
                 }
                 """;
+
+//        var testJSON = """
+//                [{
+//                    "title": "Intro To DB",
+//                    "deliveredOn": "2021-09-27"
+//                },
+//                {
+//                    "title": "Intro To DB",
+//                    "deliveredOn": "2021-09-27"
+//                }]
+//                """;
 
         RequestBuilder request = post("/lessons")
                 .contentType(MediaType.APPLICATION_JSON)
